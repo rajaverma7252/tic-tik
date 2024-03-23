@@ -10,7 +10,7 @@
         <div class="d-grid gap-4 col-6 m-auto">
             @for(item of [].constructor(playersCount); track item; let idx = $index){
                 <div class="form-group">
-                    <input type="text" class="form-control" [placeholder]="'Player ' + (idx + 1) + ' Name'" [(ngModel)]="playerDetails[idx].name">
+                    <input type="text" class="form-control" [placeholder]="'Player ' + (idx + 1) + ' Name'" [(ngModel)]="playerDetails[idx].name" maxlength="30">
                 </div>
             }
             <div class="m-auto">

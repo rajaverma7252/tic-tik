@@ -1,0 +1,1 @@
+import{Ia as i,Ja as s,Oa as a,Ta as r,W as o}from"./chunk-DQCENGP5.js";var d=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=o({type:e,selectors:[["app-questions"]],standalone:!0,features:[r],decls:2,vars:0,template:function(n,c){n&1&&(i(0,"p"),a(1,"questions works!"),s())}});let t=e;return t})();export{d as QuestionsComponent};

@@ -8,12 +8,11 @@
             <form (submit)="login(userId, password)">
                 <div class="form-group">
                     <label for="User">User : </label>
-                    <input type="text" name="User" class="form-control" placeholder="User" [(ngModel)]="userId">
+                    <input type="text" name="User" class="form-control" placeholder="User" [(ngModel)]="userId" maxlength="10">
                 </div>
                 <div class="form-group">
                     <label for="password">Password : </label>
-                    <input type="password" name="password" class="form-control" placeholder="********"
-                        [(ngModel)]="password">
+                    <input type="password" name="password" class="form-control" placeholder="********" [(ngModel)]="password" maxlength="10">
                 </div>
                 <div class="text-center mt-4">
                     <input type="submit" class="btn btn-login" value="Login" [disabled]="!userId || !password">
