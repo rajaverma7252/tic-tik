@@ -1,0 +1,22 @@
+<div class="d-flex align-items-center justify-content-center" style="height: 500px;">
+    @if (!playersCount) {
+        <div class="d-grid gap-4 col-6 m-auto">
+            <button class="btn btn-login btn-block" (click)="onPlayerCount(1)">Play with 1 Player</button>
+            <button class="btn btn-login btn-block" (click)="onPlayerCount(2)">Play with 2 Player</button>
+            <button class="btn btn-login btn-block" (click)="onPlayerCount(3)">Play with 3 Player</button>
+            <button class="btn btn-login btn-block" (click)="onPlayerCount(4)">Play with 4 Player</button>
+        </div>
+    } @else {
+        <div class="d-grid gap-4 col-6 m-auto">
+            @for(item of [].constructor(playersCount); track item; let idx = $index){
+                <div class="form-group">
+                    <input type="text" class="form-control" [placeholder]="'Player ' + (idx + 1) + ' Name'" [(ngModel)]="playerDetails[idx].name">
+                </div>
+            }
+            <div class="m-auto">
+                <button class="btn btn-login mr-2" (click)="onBack()">Back</button>
+                <button class="btn btn-login ml-2" (click)="onNext()">Next</button>
+            </div>
+        </div>
+    }
+</div>
