@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/scss/bootstrap';
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+
+body {
+    background-color: rgb(128, 185, 196);
+}
+
+.auth-card {
+    background: linear-gradient(to right, #a33dec, #e82da9);
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px #f7f7f7;
+}
+
+label {
+    color: #fff;
+    font-weight: 700;
+}
+
+.user-image {
+    height: 70px;
+}
+
+.auth-avatar {
+    text-align: center;
+    margin-top: -50px;
+}
+
+.auth {
+    margin-top: 100px;
+    border: none;
+    border-radius: 6px;
+}
+
+.btn-login {
+    background-color: #d39e00;
+    border-color: #d39e00;
+    color: #fff;
+}
+
+.btn-login:hover {
+    background-color: #ef9e53;
+    border-color: #ef9e53;
+    color: #fff;
+}
+
+.btn-login:disabled {
+    background-color: lightgray;
+    border-color: lightgray;
+    color: #322c2c;
+}
