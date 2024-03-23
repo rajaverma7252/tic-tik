@@ -34,22 +34,21 @@ export class PlayersComponent {
     let found = this.playerDetails.find((x: any) => x.name.trim() == "");
     if (!found) {
       sessionStorage.setItem('playerDetails', JSON.stringify(this.playerDetails));
+      sessionStorage.setItem("currentOrder", "1");
       Swal.fire({
-        // title: "Good job!",
         text: "Player(s) details added successfully",
         icon: "success",
         backdrop: false,
         showConfirmButton: false,
         footer: 'Redirecting to questions page...',
-        timer: 2000,
+        timer: 1500,
       });
       setTimeout(() => {
         this.router.navigate(['/home/questions']);
-      }, 2000);
+      }, 1500);
     } else {
       Swal.fire({
         icon: "error",
-        // title: "Oops...",
         text: "Player(s) name can not be empty",
         confirmButtonText: 'Try again'
       });

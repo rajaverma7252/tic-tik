@@ -31,15 +31,15 @@ export class LoginComponent {
         backdrop: false,
         showConfirmButton: false,
         footer: 'Redirecting to home page...',
-        timer: 2000,
+        timer: 1500,
       });
       setTimeout(() => {
         this.router.navigate(['/home']);
-      }, 2000);
+      }, 1500);
     } else {
       Swal.fire({
         // title: 'Error!',
-        text: 'Invalid UserId/Password',
+        text: 'Invalid User/Password',
         icon: 'error',
         confirmButtonText: 'Try again'
       })

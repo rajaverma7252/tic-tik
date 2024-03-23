@@ -1,0 +1,28 @@
+
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.card {
+    cursor: pointer;
+    background-color: aquamarine;
+}
+
+.card :hover {
+    background-color: rgb(210, 217, 108);
+    border-radius: 5px;
+}
+
+.card .disabled {
+    cursor: not-allowed;
+    background-color: gray;
+    border-radius: 5px;
+}
+
+.card .disabled :hover {
+    cursor: not-allowed;
+    background-color: gray;
+    border-radius: 5px;
+}

@@ -7,14 +7,14 @@ import { Router } from '@angular/router';
 
 export class AuthService {
 
-  constructor(private route: Router) { }
+  constructor(private router: Router) { }
 
   canActivate(): boolean {
     let login = sessionStorage.getItem('login');
     if (login && login == "true") {
       return true;
     }
-    this.route.navigate(['./login']);
+    this.router.navigate(['./login']);
     return false;
   }
 }
