@@ -1,13 +1,13 @@
 <div class="row mt-4 mb-5">
     <div class="col-sm-12 d-flex align-items-center justify-content-center mb-3 player-name">
-        <span class="name-color">{{playerName}} turns :</span>&nbsp;{{currentQuestion.text}}
+        <span class="name-color">{{playerName.toUpperCase()}} :</span>&nbsp;{{currentQuestion.text}}
     </div>
     <div class="col-sm-12 d-flex align-items-center justify-content-center mb-4 question-text">
         
     </div>
-    @for(item of [].constructor(optionCount); track item; let idx = $index){
+    @for(item of optionsList; track item; let idx = $index){
     <div class="d-flex align-items-center justify-content-center mt-2 mb-2 width-calc">
-        <button type="button" class="btn btn-warning fixed-hw" (click)="onOption(idx+1)" [disabled]="isDisabled(idx+1)">{{idx + 1}}</button>
+        <button type="button" class="btn btn-warning fixed-hw" (click)="onOption(idx+1, item)" [disabled]="isDisabled(idx+1)">{{idx + 1}}</button>
     </div>
     }
 </div>

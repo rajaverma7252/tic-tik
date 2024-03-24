@@ -14,11 +14,11 @@ import Swal from 'sweetalert2'
 
 export class OptionsComponent {
 
-  questions = config.questions;
   playerDetails: any = sessionStorage.getItem('playerDetails');
   currentOrder: any = Number(sessionStorage.getItem('currentOrder'));
   questionList: any = sessionStorage.getItem('questionList');
 
+  optionsList: any[] = [];
   currentQuestion: any;
   optionCount: number = 0;
   playerPosition: number = 0;
@@ -35,13 +35,21 @@ export class OptionsComponent {
       this.optionCount = this.playerDetails.length * 10;
       this.playerPosition = 1;
       this.playerName = this.playerDetails[this.playerPosition - 1].name;
+
+      //picked & set data from config json
+      let data: any = config.questionsDetail.find((x: any) => x.questionId == this.currentQuestion.id);
+      data.optionsData.forEach((e: any) => {
+        this.optionsList.push({'optionId': e.optionId, 'optionText': e.optionText});
+      })
+      this.optionsList.sort(() => Math.random() - 0.5);
+      this.optionsList.splice(this.optionCount);
     }
   }
 
-  onOption(option: number) {
+  onOption(option: number, item: any) {
     Swal.fire({
-      title: "Naali me",
-      imageUrl: "https://pluspng.com/img-png/user-png-icon-account-avatar-human-male-man-men-people-person-download-svg-download-png-edit-icon-512.png",
+      title: item.optionText,
+      imageUrl: "./assets/images/" + 1 + ".jpeg",
       imageWidth: 200,
       imageHeight: 200,
       backdrop: false,
