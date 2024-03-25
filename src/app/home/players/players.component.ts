@@ -19,6 +19,10 @@ export class PlayersComponent {
   constructor(private router: Router) { }
 
   onPlayerCount(event: number) {
+    let audio = new Audio();
+    audio.src = "../assets/mp3/click.wav";
+    audio.play();
+
     for (var i = 1; i <= event; i++) {
       this.playerDetails.push({ id: i, name: "" });
     }
@@ -26,11 +30,19 @@ export class PlayersComponent {
   }
 
   onBack() {
+    let audio = new Audio();
+    audio.src = "../assets/mp3/click.wav";
+    audio.play();
+
     this.playersCount = 0;
     this.playerDetails = [];
   }
 
   onNext() {
+    let audio = new Audio();
+    audio.src = "../assets/mp3/click.wav";
+    audio.play();
+    
     let found = this.playerDetails.find((x: any) => x.name.trim() == "");
     if (!found) {
       sessionStorage.setItem('playerDetails', JSON.stringify(this.playerDetails));

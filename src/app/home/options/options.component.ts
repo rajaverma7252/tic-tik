@@ -48,6 +48,10 @@ export class OptionsComponent {
   }
 
   onOption(option: number, item: any) {
+    let audio = new Audio();
+    audio.src = "../assets/mp3/click.wav";
+    audio.play();
+    
     Swal.fire({
       title: item.optionText + " " + item.postText,
       imageUrl: "./assets/images/" + item.optionId + ".jpeg",

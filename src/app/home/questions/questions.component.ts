@@ -34,6 +34,7 @@ export class QuestionsComponent {
     let audio = new Audio();
     audio.src = "../assets/mp3/click.wav";
     audio.play();
+    
     if (!valid) return;
     else this.router.navigate(['/home/questions/options']);
   }

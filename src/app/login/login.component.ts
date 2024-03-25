@@ -22,10 +22,13 @@ export class LoginComponent {
   ) { }
 
   login(userId: string, password: string) {
+    let audio = new Audio();
+    audio.src = "../assets/mp3/click.wav";
+    audio.play();
+    
     if (userId == 'raja' && password == 'raja@123') {
       sessionStorage.setItem('login', "true");
       Swal.fire({
-        // title: "Good job!",
         text: "Login Successfully",
         icon: "success",
         backdrop: false,
@@ -38,7 +41,6 @@ export class LoginComponent {
       }, 1500);
     } else {
       Swal.fire({
-        // title: 'Error!',
         text: 'Invalid User/Password',
         icon: 'error',
         confirmButtonText: 'Try again'

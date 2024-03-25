@@ -16,6 +16,10 @@ export class HeaderComponent {
   constructor(public router: Router) { }
 
   playAudio(){
+    let audio = new Audio();
+    audio.src = "../assets/mp3/click.wav";
+    audio.play();
+
     this.audio = new Audio();
     this.audio.src = "./assets/mp3/music.mp3";
     this.audio.loop = true;
@@ -24,11 +28,19 @@ export class HeaderComponent {
   }
 
   stopAudio(){
+    let audio = new Audio();
+    audio.src = "../assets/mp3/click.wav";
+    audio.play();
+
     this.audio.pause();
     this.audioEnable = false;
   }
 
   home() {
+    let audio = new Audio();
+    audio.src = "../assets/mp3/click.wav";
+    audio.play();
+
     Swal.fire({
       text: "Are you sure, You want to go to home page?",
       icon: "warning",
@@ -48,6 +60,10 @@ export class HeaderComponent {
   }
 
   logout() {
+    let audio = new Audio();
+    audio.src = "../assets/mp3/click.wav";
+    audio.play();
+    
     Swal.fire({
       text: "Are you sure, You want to logout?",
       icon: "warning",
