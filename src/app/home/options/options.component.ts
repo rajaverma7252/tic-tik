@@ -39,7 +39,8 @@ export class OptionsComponent {
       //picked & set data from config json
       let data: any = config.questionsDetail.find((x: any) => x.questionId == this.currentQuestion.id);
       data.optionsData.forEach((e: any) => {
-        this.optionsList.push({'optionId': e.optionId, 'optionText': e.optionText});
+        let optData: any = config.optionDetails.find((v: any) => v.optionId == e.optionId);
+        this.optionsList.push({'optionId': optData.optionId, 'optionText': optData.optionText, "postText": e.postText});
       })
       this.optionsList.sort(() => Math.random() - 0.5);
       this.optionsList.splice(this.optionCount);
@@ -48,8 +49,8 @@ export class OptionsComponent {
 
   onOption(option: number, item: any) {
     Swal.fire({
-      title: item.optionText,
-      imageUrl: "./assets/images/" + 1 + ".jpeg",
+      title: item.optionText + " " + item.postText,
+      imageUrl: "./assets/images/" + item.optionId + ".jpeg",
       imageWidth: 200,
       imageHeight: 200,
       backdrop: false,

@@ -11,7 +11,22 @@ import Swal from 'sweetalert2'
 })
 
 export class HeaderComponent {
+  audio: any;
+  audioEnable: boolean = false;
   constructor(public router: Router) { }
+
+  playAudio(){
+    this.audio = new Audio();
+    this.audio.src = "./assets/mp3/music.mp3";
+    this.audio.loop = true;
+    this.audio.play();
+    this.audioEnable = true;
+  }
+
+  stopAudio(){
+    this.audio.pause();
+    this.audioEnable = false;
+  }
 
   home() {
     Swal.fire({
@@ -25,8 +40,8 @@ export class HeaderComponent {
     }).then((result) => {
       if (result.isConfirmed) {
         sessionStorage.removeItem('playerDetails');
-        sessionStorage.removeItem("currentOrder");        
-        sessionStorage.removeItem("questionList");        
+        sessionStorage.removeItem("currentOrder");
+        sessionStorage.removeItem("questionList");
         this.router.navigate(['/home']);
       }
     });
@@ -45,6 +60,7 @@ export class HeaderComponent {
       if (result.isConfirmed) {
         sessionStorage.clear();
         this.router.navigate(['']);
+        this.audio.pause();
       }
     });
   }
