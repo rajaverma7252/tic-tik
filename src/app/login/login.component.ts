@@ -23,7 +23,7 @@ export class LoginComponent {
 
   login(userId: string, password: string) {
     let audio = new Audio();
-    audio.src = "../assets/mp3/click.wav";
+    audio.src = "./assets/mp3/click.wav";
     audio.play();
     
     if (userId == 'raja' && password == 'raja@123') {

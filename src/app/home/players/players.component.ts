@@ -20,7 +20,7 @@ export class PlayersComponent {
 
   onPlayerCount(event: number) {
     let audio = new Audio();
-    audio.src = "../assets/mp3/click.wav";
+    audio.src = "./assets/mp3/click.wav";
     audio.play();
 
     for (var i = 1; i <= event; i++) {
@@ -31,7 +31,7 @@ export class PlayersComponent {
 
   onBack() {
     let audio = new Audio();
-    audio.src = "../assets/mp3/click.wav";
+    audio.src = "./assets/mp3/click.wav";
     audio.play();
 
     this.playersCount = 0;
@@ -40,7 +40,7 @@ export class PlayersComponent {
 
   onNext() {
     let audio = new Audio();
-    audio.src = "../assets/mp3/click.wav";
+    audio.src = "./assets/mp3/click.wav";
     audio.play();
     
     let found = this.playerDetails.find((x: any) => x.name.trim() == "");

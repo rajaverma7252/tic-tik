@@ -32,7 +32,7 @@ export class QuestionsComponent {
 
   onQuestion(valid: boolean = false) {
     let audio = new Audio();
-    audio.src = "../assets/mp3/click.wav";
+    audio.src = "./assets/mp3/click.wav";
     audio.play();
     
     if (!valid) return;
