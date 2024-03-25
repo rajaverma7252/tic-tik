@@ -1,0 +1,1 @@
+import{ga as n,j as o,m as i}from"./chunk-CI7RB4IY.js";var f=(()=>{let t=class t{constructor(r){this.router=r}canActivate(){let r=sessionStorage.getItem("login");return r&&r=="true"?!0:(this.router.navigate(["./login"]),!1)}};t.\u0275fac=function(a){return new(a||t)(i(n))},t.\u0275prov=o({token:t,factory:t.\u0275fac,providedIn:"root"});let e=t;return e})();export{f as a};

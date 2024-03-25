@@ -1,5 +1,10 @@
 
 --------------------------------------------------------------------------------
+Package: @angular/forms
+License: "MIT"
+
+
+--------------------------------------------------------------------------------
 Package: sweetalert2
 License: "MIT"
 
@@ -24,26 +29,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-
---------------------------------------------------------------------------------
-Package: @angular/forms
-License: "MIT"
-
-
---------------------------------------------------------------------------------
-Package: @angular/common
-License: "MIT"
-
-
---------------------------------------------------------------------------------
-Package: @angular/platform-browser
-License: "MIT"
-
-
---------------------------------------------------------------------------------
-Package: @angular/router
-License: "MIT"
 
 
 --------------------------------------------------------------------------------
@@ -274,6 +259,21 @@ INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
 LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
 OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
+--------------------------------------------------------------------------------
+Package: @angular/common
+License: "MIT"
+
+
+--------------------------------------------------------------------------------
+Package: @angular/platform-browser
+License: "MIT"
+
+
+--------------------------------------------------------------------------------
+Package: @angular/router
+License: "MIT"
+
+
 --------------------------------------------------------------------------------
 Package: zone.js
 License: "MIT"
