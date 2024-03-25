@@ -1,11 +1,14 @@
 <div class="row mt-4 mb-5">
     @for(item of questionList; track item; let idx = $index){
+    @if((idx+1) === currentOrder){
+    <div id="itemRef"></div>
+    }
     <div class="col-sm-3 d-flex align-items-center justify-content-center">
         <div class="card m-4" style="width: 18rem; height: 7.5rem;" (click)="onQuestion(item.order == currentOrder)">
             <div class="card-body" [ngClass]="{'disabled': item.order != currentOrder}">
                 <h5 class="card-title">Question {{idx + 1}}</h5>
                 @if(item.order == currentOrder){
-                    <p class="card-text">{{item.text}}</p>
+                <p class="card-text">{{item.text}}</p>
                 }
             </div>
         </div>

@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import config from '../../shared/json/config.json'
-import { NgClass } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-questions',
   standalone: true,
-  imports: [NgClass],
+  imports: [NgClass, NgIf],
   templateUrl: './questions.component.html',
   styleUrl: './questions.component.scss'
 })
@@ -30,11 +30,22 @@ export class QuestionsComponent {
     }
   }
 
+  ngAfterViewInit(): void {
+    this.scroll('itemRef');
+  }
+
+  scroll(id: any) {
+    let el: any = document.getElementById(id);
+    setTimeout(() => {
+      el.scrollIntoView();
+    }, 200);
+  }
+
   onQuestion(valid: boolean = false) {
     let audio = new Audio();
     audio.src = "./assets/mp3/click.wav";
     audio.play();
-    
+
     if (!valid) return;
     else this.router.navigate(['/home/questions/options']);
   }
