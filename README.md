@@ -25,3 +25,12 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+<!-- git clone https://github.com/rajaverma7252/tic-tik.git
+
+ng new project-name --directory ./
+
+git add -am "first commit"
+git push
+
+ng build --output-path=docs/ --base-href=/tic-tik/ -->
