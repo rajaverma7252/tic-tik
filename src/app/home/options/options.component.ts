@@ -115,7 +115,7 @@ export class OptionsComponent {
       else {
         this.disabledList.push(option);
         this.playerPosition += 1;
-        this.playerName = playerDetails.name;
+        this.playerName = this.playerDetails[this.playerPosition - 1].name;
       }
     });
   }
